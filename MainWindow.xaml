@@ -1,0 +1,50 @@
+﻿<Window x:Class="TriviaGame.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TriviaGame"
+        mc:Ignorable="d"
+        Title="MainWindow" 
+        Height="720" 
+        Width="1280"
+        MinHeight="720" 
+        MinWidth="1280"
+        WindowStyle="None" 
+        ResizeMode="CanResize" 
+        WindowStartupLocation="CenterScreen" 
+        Background="#FF37A5A7" 
+        Visibility="Visible">
+    <Grid VerticalAlignment="Top" Height="45">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="45"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="45"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="45"/>
+        </Grid.ColumnDefinitions>
+        <Image x:Name="exit_button" Source="/Images/exit_button.png" Stretch="Uniform" 
+               Grid.Column="5"
+               MouseLeftButtonDown="exit_button_clicked"
+               MouseEnter="exit_button_mouseEnter"
+               MouseLeave="exit_button_mouseLeave"
+               HorizontalAlignment="Center" VerticalAlignment="Center" Height="45" Width="45"/>
+        <Image x:Name="maximize_button" Source="/Images/maximize_button.png" 
+               Grid.Column="3"
+               MouseLeftButtonDown="maximize_button_clicked"
+               MouseEnter="maximize_button_mouseEnter"
+               MouseLeave="maximize_button_mouseLeave"
+               HorizontalAlignment="Center" VerticalAlignment="Center" Height="45" Width="45"/>
+        <Image x:Name="minimize_button" Source="/Images/minimize_button.png"
+               Grid.Column="1"
+               MouseLeftButtonDown="minimize_button_clicked"
+               MouseEnter="minimize_button_mouseEnter"
+               MouseLeave="minimize_button_mouseLeave"
+               HorizontalAlignment="Center" VerticalAlignment="Center" Height="45" Width="45"/>
+    </Grid>
+</Window>
